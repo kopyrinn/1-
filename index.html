@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.container {
+			width: 900px;
+			height: 800px;
+			margin-left: auto;
+			margin-right: auto
+		}
+		.bg-danger {
+			background-color: red;
+		}
+		.bg-info {
+			background-color: blue
+		}
+		.bg-success {
+			background-color: green
+		}
+		.he1 {
+			height: 100px
+		}
+		.he2 {
+			height: 600px
+		}
+		.he3 {
+			height: 550px;
+		}
+		.mt-1 {
+			margin-top: 10px
+		}
+		.col-10 {
+			width: 80%
+		}
+		.col-2 {
+			width: 20%
+		}
+		.d-flex {
+			display: flex
+		}
+		.ml-1 {
+			margin-left: 10px
+		}
+		.col-3 {
+			width: 30%
+		}
+		.col-9 {
+			width: 70%
+		}
+		.center {
+			text-align: center;
+		}
+		.col-12 {
+			width: 100%
+		}
+		.btn {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-right: 30px;
+			padding-left: 30px
+		}
+		.bg-light {
+			background-color: #b8b8b8
+		}
+		.bg-black {
+			background-color: black
+		}
+	</style>
+</head>
+<body class="bg-black">
+	<div class="container">
+		<div class=" he1 d-flex bg-light">	<!--шапка--> 
+			<div class="he1 col-10">	
+				<h3>
+					Отряд самоубийц					
+				</h3>
+				<p>
+					Самое плохое кино
+				</p>
+			</div>
+			<div class=" he1 col-2 ml-1 center">
+				<img src="star.png" class="col-3 star1">
+				<h3 class="text1">-100000</h3>
+			</div>
+		</div>
+		<div class=" he2 mt-1 d-flex bg-light" > <!--основной блок-->
+			<div style="background-color: green; width: 500px; height: 500px; position: absolute;">		
+			</div>
+			<div class="col-3 bg-light he3">
+				<img src="afish.jpg" class="col-12">
+				<button class="btn button1">Добавить в список</button>
+			</div>
+			<div class="col-9 he3 ml-1">	
+				<iframe width="623" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>			
+			</div>			
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript">
+		let button1 = document.querySelector(".button1")
+		let star1 = document.querySelector(".star1")
+		let text1 = document.querySelector(".text1") 
+
+		let count = -100000;
+		
+		button1.onclick = function() {
+			alert("Вы добавили в список")
+
+		}
+
+		star1.onclick = function() {
+			count = count - 1;
+			text1.innerHTML = count
+			text1.style.backgroundColor = "red"
+			text1.style.transition = "3s"
+
+		}
+	</script>
+</body>
+</html>
